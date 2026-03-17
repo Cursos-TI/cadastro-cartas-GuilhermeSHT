@@ -13,6 +13,8 @@ int main() {
    float área;
    float Pib;
    int turistico;
+   double densidade, pbiper;
+   
 
    printf("== CARTA 1= ==\n");
 
@@ -30,11 +32,11 @@ int main() {
 
    printf("Digite a Área da sua cidade: ");
    scanf("%f", &área);
-   printf("A área da sua cidade é: %f\n", área);
+   printf("A área da sua cidade é: %.5f\n", área);
 
    printf("Digite o PIB da sua cidade: ");
    scanf("%f", &Pib);
-   printf("O PIB da sua cidade é: %f\n", Pib);
+   printf("O PIB da sua cidade é: %.5f\n", Pib);
 
    printf("Digite o número de pontos turísticos: ");
    scanf("%d", &turistico);
@@ -44,6 +46,12 @@ int main() {
    scanf("%s", carta);
    printf("O código da sua carta é: %s\n", carta);
 
+   densidade = (double) população / área;
+   printf("Sua densidade populacional é: %.3lf\n", densidade);
+   
+   densidade = (double) Pib / população;
+   printf("Seu PIB per Capita é: %.3lf\n", densidade);
+   
 
    char estado2;
    char nome2[20];
@@ -52,6 +60,8 @@ int main() {
    int turistico2;
    float área2;
    float Pib2;
+   double densidade2, pbiper2;
+   
 
    printf(" == CARTA 2 == \n");
 
@@ -70,11 +80,11 @@ int main() {
 
    printf("Digite a área da sua cidade: ");
    scanf("%f", &área2);
-   printf("A área da sua cidade é: %f\n", área2);
+   printf("A área da sua cidade é: %.5f\n", área2);
 
    printf("Digite o PIB da sua cidade: ");
    scanf("%f", &Pib2);
-   printf("O PIB da sua cidade é: %f\n", área2);
+   printf("O PIB da sua cidade é: %.5f\n", Pib2);
 
    printf("Digite o número de pontos turísticos: ");
    scanf("%d", &turistico2);
@@ -84,6 +94,12 @@ int main() {
    scanf("%s", carta2);
    printf("O codígo da sua carta é: %s\n",carta2);
 
+   densidade2 = (double) população2 / área2;
+   printf("Sua densidade populacional é: %3.lf\n", densidade2);
+   
+   densidade2 = (double) Pib2 / população2;
+   printf("Seu PIB per Capita é: %3.lf\n", densidade2);
+   
 
 
 
