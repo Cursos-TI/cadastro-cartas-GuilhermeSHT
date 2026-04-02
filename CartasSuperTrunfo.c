@@ -9,12 +9,12 @@ int main() {
    char estado;
    char nome [30];
    char carta [3];
-   int população;
+   unsigned long int população;
    float área;
    float Pib;
    int turistico;
    double densidade, pbiper;
-   
+   float poder;
 
    printf("== CARTA 1= ==\n");
 
@@ -27,8 +27,8 @@ int main() {
    printf("O nome da cidade é: %s\n", nome);
 
    printf("Digite a população da sua cidade: ");
-   scanf("%d", &população);
-   printf("A população da sua cidade é: %d\n", população);
+   scanf("%u", &população);
+   printf("A população da sua cidade é: %u\n", população);
 
    printf("Digite a Área da sua cidade: ");
    scanf("%f", &área);
@@ -51,17 +51,21 @@ int main() {
    
    densidade = (double) Pib / população;
    printf("Seu PIB per Capita é: %.3lf\n", densidade);
+    
+   poder = (float) população + área + Pib + turistico + pbiper + (1.0 / densidade);
    
+   printf("O Super Poder da carta 1 é: %f\n", poder);
+
 
    char estado2;
    char nome2[20];
    char carta2[3];
-   int população2;
+   unsigned long int população2;
    int turistico2;
    float área2;
    float Pib2;
    double densidade2, pbiper2;
-   
+   float poder2;
 
    printf(" == CARTA 2 == \n");
 
@@ -75,8 +79,8 @@ int main() {
    printf("O nome da sua cidade é: %s\n", nome2);
 
    printf(" Digite a população da sua cidade: ");
-   scanf("%d", &população2);
-   printf("A população da sua cidade é: %d\n", população2);
+   scanf("%u", &população2);
+   printf("A população da sua cidade é: %u\n", população2);
 
    printf("Digite a área da sua cidade: ");
    scanf("%f", &área2);
@@ -99,7 +103,35 @@ int main() {
    
    densidade2 = (double) Pib2 / população2;
    printf("Seu PIB per Capita é: %3.lf\n", densidade2);
+
+   poder2 = população2 + área2 + Pib2 + turistico2 + pbiper2 + (1.0 / densidade2);
+   printf("O Super poder da carta 2 é: %f\n", poder2);
+
+  int resultadoA;
+
+  resultadoA = população > população2;
+  printf("População : a carta %d venceu\n", resultadoA);
+
+  resultadoA = área > área2;
+  printf("Área: a carta %d venceu\n", resultadoA);
+
+  resultadoA = Pib > Pib2;
+  printf("PIb: o pib %d venceu\n", resultadoA);
+
+  resultadoA = turistico > turistico2;
+  printf("Ponto turistico: ponto turistico %d venceu\n", resultadoA);
+
+  resultadoA = pbiper > pbiper2;
+  printf("Pbiper: Pibper %d venceu\n", resultadoA);
    
+  resultadoA = densidade < densidade2;
+  printf("Densidade: A densidade %d venceu\n", resultadoA);
+
+  resultadoA = poder > poder2;
+  printf("Poder: O poder %d venceu\n", resultadoA);
+  
+
+
 
 
 
